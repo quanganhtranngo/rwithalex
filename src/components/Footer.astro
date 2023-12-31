@@ -1,4 +1,63 @@
 ---
 //import stuff
 ---
-<div>FEET</div>
+<div class="footer-wrapper">
+    <ul>
+        <li><a href="mailto:quatran@iu.edu" title="E-Mail"><i class="fas fa-envelope"></i></a></li>
+        <li><a href="https://scholar.google.com/citations?user=DZCxUJAAAAAJ" title="Google Scholar"><i class="ai ai-google-scholar-square"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/quang-anh-tran-345696173/" title="LinkedIn"><i class="fab fa-linkedin"></i></a></li>
+        <li><a href="https://twitter.com/QuangAnhTranNgo" title="Twitter"><i class="fab fa-twitter"></i></a></li>
+        <li><a href="https://socialroles.lab.indiana.edu/people/index.html" title="My Institution"><i class="fas fa-university"></i></a></li>
+    </ul>
+</div>
+
+<style>
+    .footer-wrapper {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 60px;
+        border-top: 1px solid black;
+        padding-top: 1em;
+        font-size: small;
+        color: black;
+
+        .fas, .fab, .ai {
+            font-size: large;
+            transition: all .15s ease-in-out;
+        }
+
+        .fas:hover, .fab:hover, .ai:hover {
+            color: #60c17d !important;
+            transform: scale(1.5);
+        }
+
+    }
+
+    ul li a i {
+        color: black;
+    }
+
+    ul {
+        display: table;
+        margin: auto;
+        padding: 0;
+    }
+
+    li {
+        list-style-type: none;
+        display: inline-block;
+        padding: 0px 10px;
+    }
+
+    a {
+        color: black;
+        text-decoration: underline;
+        text-decoration-style: dotted;
+        text-underline-offset: 3px;
+    }
+
+    a:hover  {
+        text-decoration-style: solid;
+        text-decoration-color: black;
+    }
+</style>
