@@ -1,0 +1,31 @@
+---
+import ConnectedPage from "../../layouts/ConnectedPage.astro";
+export function getStaticPaths() {
+    return [
+        {params: {rblogtitle: 'M1_Introduction-to-R'}},
+        {params: {rblogtitle: 'M2_Loading-in-Data-in-R'}},
+        {params: {rblogtitle: 'M3_Data-Management-I'}},
+        {params: {rblogtitle: 'M4_Data-Management-II'}},
+        {params: {rblogtitle: 'M5_Descriptives'}},
+        {params: {rblogtitle: 'M6_VisualizationI'}},
+        {params: {rblogtitle: 'M7_VisualizationII'}},
+        {params: {rblogtitle: 'M8_CorrelationRegression'}},
+    ];
+}
+
+const { rblogtitle } = Astro.params;
+---
+<ConnectedPage>
+    <article>
+        <iframe class="rblog-wrapper" src=`../rmd_html/${rblogtitle}.html`/>
+    </article>
+</ConnectedPage>
+
+<style>
+    .rblog-wrapper {
+        height: 70vh;
+        width: 140%;
+        border: none;
+        margin-left: -20%;
+    }
+</style>
