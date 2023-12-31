@@ -1,0 +1,63 @@
+---
+const { image } = Astro.props.frontmatter || Astro.props;
+import ConnectedPage from "./ConnectedPage.astro";
+
+---
+<ConnectedPage>
+    <div class="wrapper">
+        <div class="content-wrapper">
+        <article>
+        <slot />
+        </article>
+        </div>
+        <div class="image-wrapper">
+            <img class="image" src={image}/>
+        </div>
+    </div>
+</ConnectedPage>
+
+<style>
+    .wrapper {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .content-wrapper {
+        width: 64%;
+        align-items: center;
+        display: inline-flex;
+    }
+
+    .image-wrapper {
+        align-items: center;
+        width: 30%;
+        text-align: center;
+        padding: 0;
+        display: inline-flex;
+
+    }
+
+    .image {
+        margin: 0;
+        height: auto;
+        width: 100%;
+    }
+
+
+    @media only screen and (max-width: 600px) {
+
+        .content {
+            width: 100%;
+            padding: 0;
+            margin-bottom: 1em;
+        }
+
+        .image {
+            width: 100%;
+            margin: auto;
+        }
+
+    }
+</style>
