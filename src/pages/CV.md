@@ -6,4 +6,4 @@ layout: "../layouts/ConnectedPage.astro"
 hide_title: true
 ---
 
-Here you can find my [CV](https://github.com/quanganhtranngo/quanganhtranngo.github.io/blob/main/static/AlexTran_CV.docx).
+Here you can find my [CV](./public/CV.pdf).

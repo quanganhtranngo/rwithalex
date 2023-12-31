@@ -1,0 +1,10 @@
+---
+import ConnectedPage from "./ConnectedPage.astro";
+const { title } = Astro.props.frontmatter || Astro.props;
+---
+<ConnectedPage>
+    <article>
+        <h2>{title}</h2>
+        <slot/>
+    </article>
+</ConnectedPage>
