@@ -2,5 +2,38 @@
 //import stuff
 import Navbar from "./Navbar.astro";
 ---
-<div>TITLE</div>
-<Navbar/>
+<style>
+    @font-face {
+        font-family: Bree Serif;
+        src: url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap") format("Bree serif")
+    }
+    .header {
+        text-align: center;
+        position: static;
+        margin-top: 60px;
+        line-height: 1.1;
+    }
+    .title {
+        font-family: Bree Serif, serif;
+        font-size: 52px;
+        text-decoration: none;
+        margin: 0;
+        padding: 0;
+        font-display: swap;
+        color: black;
+    }
+    @media only screen and (max-width: 600px) {
+
+        header .title {
+            margin-bottom: 10px;
+        }
+
+        header .title {
+            font-size: 44px;
+        }
+    }
+</style>
+<div class="header">
+    <a href="/" class="title">Quang-Anh Ngo Tran</a>
+    <Navbar/>
+</div>
