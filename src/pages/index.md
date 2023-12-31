@@ -2,7 +2,7 @@
 title: "Alex Tran"
 date: 2022-11-27T18:12:11+07:00
 draft: false
-layout: "../layouts/landing_page.astro"
+layout: "../layouts/ConnectedPage.astro"
 image: tran-alex1.jpg
 ---
 
