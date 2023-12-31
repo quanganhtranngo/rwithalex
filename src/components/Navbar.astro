@@ -2,21 +2,80 @@
 //Import stuff
 ---
 <div class="nav-wrapper">
-    <a class="nav-link" href="about">About Me</a>
-    <a class="nav-link" href="research">Research</a>
-    <a class="nav-link" href="teaching">Teaching</a>
-    <a class="nav-link" href="awards">Awards & Honors</a>
-    <a class="nav-link" href="CV">CV</a>
-    <a class="nav-link" href="">R with Alex</a>
-    <a class="nav-link" href="books">Recommended Books</a>
-    <a class="nav-link" href="blogs">Blogs</a>
+    <ul>
+        <li><strong><a class="nav-link" href="about">About Me</a></strong></li>
+        <li><strong><a class="nav-link" href="research">Research</a></strong></li>
+        <li><strong><a class="nav-link" href="teaching">Teaching</a></strong></li>
+        <li><strong><a class="nav-link" href="awards">Awards & Honors</a></strong></li>
+        <li><strong><a class="nav-link" href="CV">CV</a></strong></li>
+        <li><strong><a class="nav-link" href="">R with Alex</a></strong></li>
+        <li><strong><a class="nav-link" href="books">Recommended Books</a></strong></li>
+        <li><strong><a class="nav-link" href="blogs">Blogs</a></strong></li>
+    </ul>
 </div>
 
 <style>
     .nav-wrapper {
-        flex-direction: row;
+        margin-top: 1.5em;
+        margin-bottom: 1em;
+        padding: 0;
+        text-align: center;
     }
-    .nav-link {
-        color: blue;
+    a {
+        display: inline-block;
+        color: #60c17d;
+        text-decoration: none;
+    }
+    a::after {
+        margin-top: 4px;
+        content: '';
+        display: block;
+        width: 0;
+        height: 4px;
+        background: #60c17d;
+        transition: width 0.25s;
+    }
+
+    a:hover::after {
+        width: 100%;
+    }
+
+    ul {
+        display: table;
+        margin: auto;
+        padding: 0;
+    }
+
+    li {
+        list-style-type: none;
+        display: inline-block;
+        font-size: 24px;
+        padding: 0;
+        margin: 0;
+    }
+
+    li + li:before {
+        content: "●";
+        padding: 16px;
+    }
+
+    @media only screen and (max-width: 600px) {
+
+        .nav-wrapper {
+            border-top: 1px solid invert($background-color);
+            border-bottom: 1px solid invert($background-color);
+            padding: 1em;
+        }
+
+        li {
+            padding: 6px 0;
+            display: block;
+        }
+
+        li + li:before {
+            content: "";
+            padding: 0;
+        }
+
     }
 </style>
