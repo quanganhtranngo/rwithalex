@@ -14,4 +14,4 @@ I am a second-year graduate student in Social Psychology at Indiana University B
 
 I love reading, dancing, creative writing, and playing League of Legends and Teamfight Tactics in my free time.
 
-You can find out more about me on my [[website]](https://quanganhtranngo.github.io/)
+You can find out more about me on my [website](https://quanganhtranngo.github.io/)
