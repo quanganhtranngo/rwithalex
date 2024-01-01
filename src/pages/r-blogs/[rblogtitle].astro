@@ -26,12 +26,20 @@ const { rblogtitle } = Astro.params;
         height: 70vh;
         border: none;
         margin-left: -20%;
+        width: 140%;
     }
 
     @media screen and (max-width: 600px) {
         .rblog-wrapper {
             width: 98%;
             margin-left: 1%;
+        }
+    }
+
+    @media screen and (max-width: 900px) {
+        .rblog-wrapper {
+            width: 110%;
+            margin-left: -5%;
         }
     }
 </style>
