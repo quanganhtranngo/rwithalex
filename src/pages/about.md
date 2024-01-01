@@ -13,3 +13,5 @@ Hi, my name is Quang-Anh Ngo Tran (Alex Tran), and I am the author of this blog!
 I am a second-year graduate student in Social Psychology at Indiana University Bloomington from Vietnam, advised by Dr. Amanda Diekman. I am particularly interested in stereotyping, bias, prejudice, intersectionality, and interminority coalition.
 
 I love reading, dancing, creative writing, and playing League of Legends and Teamfight Tactics in my free time.
+
+You can find out more about me on my [[website]](https://quanganhtranngo.github.io/)
