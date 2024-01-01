@@ -1,5 +1,4 @@
 ---
-//Import stuff
 ---
 <div class="nav-wrapper">
     <ul>
@@ -13,6 +12,34 @@
         <li><strong><a class="nav-link" href="/blogs">Blogs</a></strong></li>
     </ul>
 </div>
+<div class="mobile-wrapper" id="mobileWrapper">
+    <button class="nav-button" id="navButton"><i class="fas fa-bars"></i></button>
+    <div class="mobile-dropdown-wrapper" id="mobileDropdownWrapper">
+        <ul>
+            <li><strong><a class="nav-link" href="/about">About</a></strong></li>
+            <li><strong><a class="nav-link" href="/research">Research</a></strong></li>
+            <li><strong><a class="nav-link" href="/teaching">Teaching</a></strong></li>
+            <li><strong><a class="nav-link" href="awards">Awards & Honors</a></strong></li>
+            <li><strong><a class="nav-link" href="./public/CV.pdf">CV</a></strong></li>
+            <li><strong><a class="nav-link" href="/r-blogs">R with Alex</a></strong></li>
+            <li><strong><a class="nav-link" href="/books">Recommended Books</a></strong></li>
+            <li><strong><a class="nav-link" href="/blogs">Blogs</a></strong></li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    document.getElementById('navButton').addEventListener('click', function() {
+        let dropdown = document.getElementById('mobileDropdownWrapper');
+        dropdown.classList.toggle('open');
+
+        let mobilewrapper = document.getElementById('mobileWrapper');
+        mobilewrapper.classList.toggle('open');
+
+        let navbutton = document.getElementById('navButton');
+        navbutton.innerHTML =  navbutton.innerHTML == "<i class=\"fas fa-xmark\"></i>" ?  "<i class=\"fas fa-bars\"></i>" : "<i class=\"fas fa-xmark\"></i>";
+    });
+</script>
 
 <style>
     .nav-wrapper {
@@ -59,17 +86,25 @@
         padding: 16px;
     }
 
+    .mobile-wrapper {
+        display: none;
+    }
+
+    .mobile-dropdown-wrapper {
+        opacity: 0;
+        height: 0px;
+    }
+
     @media only screen and (max-width: 600px) {
 
         .nav-wrapper {
-            border-top: 1px solid invert($background-color);
-            border-bottom: 1px solid invert($background-color);
-            padding: 1em;
+            display: none;
         }
 
         li {
-            padding: 6px 0;
-            display: block;
+            padding: 0px;
+            display: flex;
+            justify-content: center;
         }
 
         li + li:before {
@@ -77,5 +112,33 @@
             padding: 0;
         }
 
+        .nav-button {
+            border: none;
+            background-color: #fcfbf9;
+            min-width: 10vw;
+            max-width: 10vw;
+            min-height: 5vh;
+            max-height: 5vh;
+        }
+
+        .mobile-wrapper {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            display: flex;
+            width: 100vw;
+            height: 5vh;
+            border-bottom: 1px solid black;
+        }
+
+        .open {
+            display: flex;
+            flex-direction: column;
+            min-width: 100vw;
+            min-height: 100vh;
+            background-color: #fcfbf9;
+            opacity: 1;
+            transition: opacity 0.6s ease;
+        }
     }
 </style>
