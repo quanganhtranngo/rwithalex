@@ -24,14 +24,14 @@ const { rblogtitle } = Astro.params;
 <style>
     .rblog-wrapper {
         height: 70vh;
-        width: 140%;
         border: none;
         margin-left: -20%;
+    }
 
-        @media only screen and (max-width: 600px) {
-            .rblog-wrapper {
-                width: 98%;
-            }
+    @media screen and (max-width: 600px) {
+        .rblog-wrapper {
+            width: 98%;
+            margin-left: 1%;
         }
     }
 </style>
