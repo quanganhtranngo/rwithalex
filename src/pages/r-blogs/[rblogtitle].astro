@@ -27,5 +27,11 @@ const { rblogtitle } = Astro.params;
         width: 140%;
         border: none;
         margin-left: -20%;
+
+        @media only screen and (max-width: 600px) {
+            .rblog-wrapper {
+                width: 98%;
+            }
+        }
     }
 </style>
